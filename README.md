@@ -105,3 +105,99 @@ The detailed analysis includes:
 - Product performance
 - Interactive filters
 - Drill-through analysis
+
+## 📈 Power BI Dashboard
+
+An interactive Power BI dashboard was developed to monitor business performance and explore revenue, profitability, product performance, and order-level details.
+
+### Executive Overview
+
+The executive dashboard includes:
+
+- Revenue and profit KPIs
+- Marketing investment
+- Average ticket
+- Average quantity per order
+- Monthly revenue and profit trends
+- Revenue and profit by product category
+
+![Executive Overview](image/dashboard-overview.png)
+
+### Product & Order Details
+
+The detailed analysis includes:
+
+- Revenue, cost, and profit by product
+- Quantity sold
+- Order-level information
+- Product performance
+- Interactive filters
+- Drill-through analysis
+
+![Product & Order Details](image/dashboard-detail.png)
+
+## 💡 Business Recommendations
+
+Based on the analysis, the following actions could help improve business performance:
+
+1. **Optimize the checkout and payment process**
+   
+   The largest funnel drop-off occurs between `begin_checkout` and
+   `add_payment_info`, with a conversion rate of 86.71%. This stage
+   should be investigated to identify potential friction in the payment
+   information process.
+
+2. **Continue monitoring product profitability**
+   
+   The business generated $5.96M in profit with an overall profit margin
+   of approximately 11.5%. Monitoring profitability at the product and
+   category level can help identify opportunities to improve margins.
+
+3. **Investigate user behavior between product selection and cart**
+   
+   The number of users performing `add_to_cart` slightly exceeds those
+   performing `select_item`. This suggests that some users may be
+   generating events without a corresponding recorded previous step,
+   which should be investigated to improve event tracking and funnel
+   accuracy.
+
+4. **Continue monitoring cohort retention**
+   
+   Retention remained relatively stable across the analyzed cohorts,
+   with approximately 41–42% retention in Week 2 and 40–43% in Week 3.
+   Cohort monitoring should be maintained to detect future changes in
+   user engagement.
+
+5. **Use experimentation before implementing checkout changes**
+   
+   The A/B test did not provide statistically significant evidence that
+   the tested UI change affected purchase conversion. Future checkout
+   changes should continue to be evaluated through controlled
+   experiments before being rolled out broadly.
+
+
+---
+
+## 🚀 How to Use
+
+Aquí debemos tener cuidado con algo: **el notebook utiliza una conexión PostgreSQL** para el análisis del funnel y también carga el dataset del experimento desde una URL.
+
+Por eso no quiero decir simplemente *"download and run the notebook"*.
+
+Una versión más correcta sería:
+
+```markdown
+## 🚀 How to Use
+
+### Python Analysis
+
+1. Clone or download this repository.
+2. Open `RappiPlus_Analysis.ipynb` using Jupyter Notebook, JupyterLab, Google Colab, or VS Code.
+3. Install the required Python libraries.
+4. Configure the PostgreSQL connection using environment variables before running the SQL analysis sections.
+
+> Database credentials are not included in this repository for security reasons.
+
+### Power BI
+
+Open `RappiPlus_Dashboard.pbix` with Power BI Desktop to explore the interactive dashboard.
