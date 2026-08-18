@@ -180,15 +180,6 @@ Based on the analysis, the following actions could help improve business perform
 
 ## 🚀 How to Use
 
-Aquí debemos tener cuidado con algo: **el notebook utiliza una conexión PostgreSQL** para el análisis del funnel y también carga el dataset del experimento desde una URL.
-
-Por eso no quiero decir simplemente *"download and run the notebook"*.
-
-Una versión más correcta sería:
-
-```markdown
-## 🚀 How to Use
-
 ### Python Analysis
 
 1. Clone or download this repository.
